@@ -75,13 +75,13 @@ const Hero = () => {
           </div>
         </div>
         <div className=" col-span-5 place-self-center mt-4">
-          <div className=" motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[400px] lg:w-[400px]">
+          <div className=" border-dasj border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[400px] lg:w-[400px]">
             <Image
-              src="/hero-image.png"
+              src="/hero.png"
               alt="hero image"
-              width={300}
-              height={300}
-              className="    absolute  left-1/2 top-1/2 transform  -translate-x-1/2  -translate-y-1/2"
+              width={400}
+              height={400}
+              className="   drop-shadow-lg    absolute  left-1/2 top-1/2 transform  -translate-x-1/2  -translate-y-1/2"
             />
           </div>
         </div>

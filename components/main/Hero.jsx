@@ -17,7 +17,7 @@ const Hero = () => {
           >
             <h1 className="   text-white mb-4 text-4xl sm:text-5xl  lg:text-6xl font-extrabold">
               <span className=" block mr-2  text-transparent  bg-clip-text  bg-gradient-to-br from-blue-500 via-purple-500 to-pink-600">
-                Hello, I'm
+                Hello, I&apos;m
               </span>
               <TypeAnimation
                 sequence={[
@@ -37,9 +37,9 @@ const Hero = () => {
               />
             </h1>
             <p className="  text-myText  text-base  sm:text-lg lg:text-xl mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
-              fugit earum. Veniam possimus aut architecto debitis deserunt hic
-              quo eos.
+            Enthusiastic and highly motivated frontend developer with a strong
+              foundation in ReactJS seeking an opportunity to contribute my
+              skills and knowledge to a dynamic team.
             </p>
           </motion.div>
           <div>

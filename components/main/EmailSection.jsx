@@ -51,11 +51,13 @@ function EmailSection() {
       <div className=" bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-3xl  absolute top-2/3 -left-4 transform -translate-x-1/2 -translate-1/2  animate-bounce-slow"></div>
       <div className=" bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-800 to-transparent rounded-full h-80 w-80 z-0 blur-3xl opacity-70 absolute -top-2 -right-96 transform -translate-x-1/2 -translate-1/2 animate-pulse"></div>
       <div>
-        <h5 className=" text-xl text-white my-2 font-bold">Let's Connect</h5>
+        <h5 className=" text-xl text-white my-2 font-bold">
+          Let &apos; s Connect
+        </h5>
         <p className=" text-myText mb-4 max-w-md ">
-          I'm currently looking for new opportunities, my inbox is always open.
-          Whether you have a question or just want to say hi, I'll try my best
-          to get back to you!
+          I&apos;m currently looking for new opportunities, my inbox is always
+          open. Whether you have a question or just want to say hi, I&apos;ll
+          try my best to get back to you!
         </p>
         <div className="socialMedia"></div>
       </div>

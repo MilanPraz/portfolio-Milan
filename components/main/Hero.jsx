@@ -17,7 +17,7 @@ const Hero = () => {
           >
             <h1 className="   text-white mb-4 text-4xl sm:text-5xl  lg:text-6xl font-extrabold">
               <span className=" block mr-2  text-transparent  bg-clip-text  bg-gradient-to-br from-blue-500 via-purple-500 to-pink-600">
-                Hello, I'm
+                Hello, I&apos;m
               </span>
               <TypeAnimation
                 sequence={[
@@ -37,9 +37,9 @@ const Hero = () => {
               />
             </h1>
             <p className="  text-myText  text-base  sm:text-lg lg:text-xl mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
-              fugit earum. Veniam possimus aut architecto debitis deserunt hic
-              quo eos.
+              Enthusiastic and highly motivated frontend developer with a strong
+              foundation in ReactJS seeking an opportunity to contribute my
+              skills and knowledge to a dynamic team.
             </p>
           </motion.div>
           <div>
@@ -74,14 +74,14 @@ const Hero = () => {
             </motion.button>
           </div>
         </div>
-        <div className=" col-span-5 place-self-center mt-4">
-          <div className=" border-dasj border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[400px] lg:w-[400px]">
+        <div className=" col-span-5 place-self-center mt-8">
+          <div className=" border-dasj border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[280px] lg:w-[280px]">
             <Image
               src="/hero.png"
               alt="hero image"
               width={400}
               height={400}
-              className="   drop-shadow-lg    absolute  left-1/2 top-1/2 transform  -translate-x-1/2  -translate-y-1/2"
+              className="   drop-shadow-lg    absolute  left-1/2 top-2/3 transform  -translate-x-1/2  -translate-y-1/2"
             />
           </div>
         </div>

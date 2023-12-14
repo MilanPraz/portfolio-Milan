@@ -74,7 +74,7 @@ const Hero = () => {
             </motion.button>
           </div>
         </div>
-        <div className=" col-span-5 place-self-center mt-8">
+        <div className=" col-span-5 place-self-center mt-20 md:mt-8">
           <div className=" border-dash border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[280px] lg:w-[280px]">
             <Image
               src="/hero.png"

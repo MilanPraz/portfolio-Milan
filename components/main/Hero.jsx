@@ -37,7 +37,11 @@ const Hero = () => {
               />
             </h1>
             <p className="  text-myText  text-base  sm:text-lg lg:text-xl mb-6">
+<<<<<<< HEAD
               Enthusiastic and highly motivated frontend developer with a strong
+=======
+            Enthusiastic and highly motivated frontend developer with a strong
+>>>>>>> 61abeca7dada6825b9b4b1bd01438012473bee6e
               foundation in ReactJS seeking an opportunity to contribute my
               skills and knowledge to a dynamic team.
             </p>
@@ -74,8 +78,13 @@ const Hero = () => {
             </motion.button>
           </div>
         </div>
+<<<<<<< HEAD
         <div className=" col-span-5 place-self-center  mt-20 lg:mt-8">
           <div className=" border-dash border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[200px] w-[200px] lg:h-[280px] lg:w-[280px]">
+=======
+        <div className=" col-span-5 place-self-center mt-20 md:mt-8">
+          <div className=" border-dash border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[280px] lg:w-[280px]">
+>>>>>>> 61abeca7dada6825b9b4b1bd01438012473bee6e
             <Image
               src="/hero.png"
               alt="hero image"

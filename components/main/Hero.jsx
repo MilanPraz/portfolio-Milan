@@ -37,11 +37,7 @@ const Hero = () => {
               />
             </h1>
             <p className="  text-myText  text-base  sm:text-lg lg:text-xl mb-6">
-<<<<<<< HEAD
               Enthusiastic and highly motivated frontend developer with a strong
-=======
-            Enthusiastic and highly motivated frontend developer with a strong
->>>>>>> 61abeca7dada6825b9b4b1bd01438012473bee6e
               foundation in ReactJS seeking an opportunity to contribute my
               skills and knowledge to a dynamic team.
             </p>

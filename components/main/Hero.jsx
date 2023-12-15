@@ -61,8 +61,8 @@ const Hero = () => {
               </motion.button>
             </Link>
             <motion.button
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ x: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               className=" bg-clip-border bg-gradient-to-br from-blue-500 via-purple-500 to-pink-400 mt-4   sm:mt-0 bg-transparent w-full sm:w-fit px-1 py-1 hover:bg-slate-800 rounded-full  text-white"
             >
@@ -74,8 +74,8 @@ const Hero = () => {
             </motion.button>
           </div>
         </div>
-        <div className=" col-span-5 place-self-center mt-8">
-          <div className=" border-dasj border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[250px] w-[250px] lg:h-[280px] lg:w-[280px]">
+        <div className=" col-span-5 place-self-center  mt-20 lg:mt-8">
+          <div className=" border-dash border-purple-500 border-4 drop-shadow-lg  border-e-0 border-s-0 border-t-0 border-r-2 border-l-0 motion-safe:animate-bounce-slow relative rounded-full bg-[#181818] h-[200px] w-[200px] lg:h-[280px] lg:w-[280px]">
             <Image
               src="/hero.png"
               alt="hero image"

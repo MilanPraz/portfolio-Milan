@@ -11,7 +11,7 @@ const projectData = [
     title: "Job Portal Website",
     description:
       "This is a job portal website which is fully a MERN Stack Project",
-    image: "/project-1.png",
+    image: "/project-1.webp",
     tag: ["all", "web"],
     gitUrl: "https://github.com/MilanPraz/jobholic-app",
     previewUrl: "https://jobholic-app.vercel.app/",
@@ -21,7 +21,7 @@ const projectData = [
     title: "Uptown Websiite",
     description:
       "This is a Real Estate Marketplaces website which is fully a MERN Stack Project",
-    image: "/project-2.png",
+    image: "/project-2.webp",
     tag: ["all", "web"],
     gitUrl: "https://github.com/MilanPraz/uptown-frontend",
     previewUrl: "https://uptown-self.vercel.app/",
@@ -30,7 +30,7 @@ const projectData = [
     id: 3,
     title: "Foodmandu",
     description: "This is a foodmandu app clone",
-    image: "/foodmandu.png",
+    image: "/foodmandu.webp",
     tag: ["all", "mobile"],
     gitUrl: "https://github.com/MilanPraz/uptown-frontend",
     previewUrl: "https://uptown-self.vercel.app/",

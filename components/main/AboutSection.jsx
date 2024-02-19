@@ -54,7 +54,13 @@ function AboutSection() {
   return (
     <section className=" text-white" id="about">
       <div className=" md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 lg:gap-14 sm:py-16">
-        <Image src={"/about-image.png"} alt="image" width={500} height={500} />
+        <Image
+          src={"/about-image.webp"}
+          loading="lazy"
+          alt="image"
+          width={500}
+          height={500}
+        />
         <div className=" flex flex-col mt-4 md:mt-0 text-left h-full">
           <h1 className=" text-4xl font-bold text-white mb-4">About Me</h1>
           <p className=" text-base md:text-lg">

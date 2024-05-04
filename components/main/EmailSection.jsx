@@ -2,6 +2,9 @@
 
 import axios from "axios";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import GridAnimation from "./GridAnimation";
 
 function EmailSection() {
   const initial = {
@@ -9,21 +12,34 @@ function EmailSection() {
     subject: "",
     message: "",
   };
-  const [input, setInput] = useState(initial);
+  const [userData, setUserData] = useState({});
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  function handleChange(e) {
-    setInput({ ...input, [e.target.name]: e.target.value });
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-
+  // console.log(input);
+  async function onSubmit(data) {
+    setUserData(data);
+    // e.preventDefault();
+    console.log(data);
     // console.log(JSONData);
-    const endpoint = "api/send";
 
     await axios
-      .post(endpoint, input)
-      .then((res) => console.log(res.data))
+      .post("/api/send", data)
+      .then((res) => {
+        console.log(res.data);
+        Swal.fire({
+          position: "top",
+          icon: "success",
+          title: "Submitted Successfullly",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+        reset();
+      })
       .catch((err) => console.log(err));
 
     // const JSONData = JSON.stringify(data);
@@ -46,33 +62,26 @@ function EmailSection() {
   return (
     <section
       id="contact"
-      className=" grid md:grid-cols-2 my-12 py-24 gap-4 relative"
+      className=" grid md:grid-cols-2 my-12 py-24  gap-4 relative"
     >
       <div className=" bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-3xl  absolute top-2/3 -left-4 transform -translate-x-1/2 -translate-1/2  animate-bounce-slow"></div>
-<<<<<<< HEAD
       <div className=" overflow-clip bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-800 to-transparent rounded-full h-80 w-80 z-0 blur-3xl opacity-70 absolute -top-4 -right-12 md:-right-96 transform -translate-x-1/2 -translate-1/2 animate-pulse"></div>
       <div>
-        <h5 className=" text-xl text-white my-2 font-bold">
+        <h5 className=" text-xl text-white my-2 font-bold z-30 relative">
           Let &apos; s Connect
         </h5>
         <p className=" text-myText mb-4 max-w-md ">
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
-=======
-      <div className=" bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-800 to-transparent rounded-full h-80 w-80 z-0 blur-3xl opacity-70 absolute -top-2  -right-12 md:-right-96 transform -translate-x-1/2 -translate-1/2 animate-pulse"></div>
-      <div>
-        <h5 className=" text-xl text-white my-2 font-bold">Let&apos;s Connect</h5>
-        <p className=" text-myText mb-4 max-w-md ">
-          I&apos;m currently looking for new opportunities, my inbox is always open.
-          Whether you have a question or just want to say hi, I&apos;ll try my best
-          to get back to you!
->>>>>>> 61abeca7dada6825b9b4b1bd01438012473bee6e
         </p>
         <div className="socialMedia"></div>
       </div>
       <div>
-        <form onSubmit={handleSubmit} className=" flex flex-col gap-1">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className=" flex flex-col gap-1"
+        >
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -81,15 +90,14 @@ function EmailSection() {
               Your Email
             </label>
             <input
+              {...register("email", { required: "*email is required" })}
               type="email"
               name="email"
               id="email"
-              value={input.email}
-              onChange={(e) => handleChange(e)}
-              required
               placeholder="example@gmail.com"
               className=" bg-myBg outline-none border text-white border-[#33353F]  placeholder:text-[#9CA2A9] text-sm rounded-lg w-full  block p-2.5 "
             />
+            <small className=" text-red-700">{errors?.email?.message}</small>
           </div>
           <div className="mb-6">
             <label
@@ -99,15 +107,15 @@ function EmailSection() {
               Subject
             </label>
             <input
-              value={input.subject}
-              onChange={(e) => handleChange(e)}
+              {...register("subject", { required: "*subject is required" })}
               name="subject"
               type="text"
               id="subject"
-              required
               placeholder="say Hi"
-              className=" text-white bg-myBg outline-none border border-[#33353F]  placeholder:text-[#9CA2A9] text-sm rounded-lg w-full  block p-2.5 "
+              autoComplete="false"
+              className=" text-white dark:text-white bg-myBg outline-none border border-[#33353F]  placeholder:text-[#9CA2A9] text-sm rounded-lg w-full  block p-2.5 "
             />
+            <small className=" text-red-700">{errors?.subject?.message}</small>
           </div>
           <div className="mb-6">
             <label
@@ -117,14 +125,15 @@ function EmailSection() {
               Message
             </label>
             <textarea
-              value={input.message}
-              onChange={(e) => handleChange(e)}
+              {...register("message", {
+                required: "*Say at least HI! to me :-)",
+              })}
               type="text"
               name="message"
-              required
               placeholder="Let's talk about..."
               className=" text-white bg-myBg outline-none border border-[#33353F]  placeholder:text-[#9CA2A9] text-sm rounded-lg w-full  block p-2.5 "
             />
+            <small className=" text-red-700">{errors?.message?.message}</small>
           </div>
           <button
             type="submit"

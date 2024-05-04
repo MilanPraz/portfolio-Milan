@@ -5,6 +5,7 @@ import AboutSection from "../../components/main/AboutSection";
 import ProjectSection from "../../components/main/ProjectSection";
 import EmailSection from "../../components/main/EmailSection";
 import Footer from "../../components/main/Footer";
+import GridAnimation from "../../components/main/GridAnimation";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <Hero />
           <AboutSection />
           <ProjectSection />
+          <GridAnimation />
           <EmailSection />
         </div>
         <Footer />

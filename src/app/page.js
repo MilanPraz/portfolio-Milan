@@ -5,8 +5,12 @@ import AboutSection from "../../components/main/AboutSection";
 import ProjectSection from "../../components/main/ProjectSection";
 import EmailSection from "../../components/main/EmailSection";
 import Footer from "../../components/main/Footer";
-import GridAnimation from "../../components/main/GridAnimation";
 
+import dynamic from "next/dynamic";
+const GridAnimation = dynamic(
+  () => import("../../components/main/GridAnimation"),
+  { ssr: false }
+);
 export default function Home() {
   return (
     <>
